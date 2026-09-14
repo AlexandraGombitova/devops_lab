@@ -4,4 +4,4 @@
 **This is READ.me file of the labs here will be brief of the labs and what we learned from the sessions** 
 **Boo YEAH Group 9!**
 ---
-![workflow](https://github.com/<AlexandraGombitova>/<devops_lab>/actions/workflows/main.yml/badge.svg)
+![workflow](https://github.com/AlexandraGombitova/devops_lab/actions/workflows/main.yml/badge.svg)
