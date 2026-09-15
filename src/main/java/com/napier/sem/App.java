@@ -19,7 +19,7 @@ public class App
 
         // Connection to the database
         Connection con = null;
-        int retries = 10; // Znížené zo 100 na 10 pokusov
+        int retries = 20; // Znížené zo 100 na 10 pokusov
         for (int i = 0; i < retries; ++i)
         {
             System.out.println("Connecting to database...");
