@@ -72,6 +72,22 @@ public class App {
     }
 
     /**
+     * Display employee details.
+     */
+    public void displayEmployee(Employee emp) {
+        if (emp != null) {
+            System.out.println(
+                    emp.emp_no + " "
+                            + emp.first_name + " "
+                            + emp.last_name + "\n"
+                            + emp.title + "\n"
+                            + "Salary:" + emp.salary + "\n"
+                            + emp.dept_name + "\n"
+                            + "Manager: " + emp.manager + "\n");
+        }
+    }
+
+    /**
      * Disconnect from the MySQL database.
      */
     public void disconnect() {
@@ -92,13 +108,11 @@ public class App {
         // Connect to database
         a.connect();
 
-        // Get Employee test
-        Employee emp = a.getEmployee(25553);
-        if (emp != null) {
-            System.out.println("Employee found: " + emp.first_name + " " + emp.last_name);
-        } else {
-            System.out.println("Employee not found");
-        }
+        // Get Employee
+        Employee emp = a.getEmployee(255530);
+
+        // Display results
+        a.displayEmployee(emp);
 
         // Disconnect from database
         a.disconnect();
