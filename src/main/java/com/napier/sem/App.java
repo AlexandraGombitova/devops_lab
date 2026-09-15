@@ -19,20 +19,19 @@ public class App
 
         // Connection to the database
         Connection con = null;
-        int retries = 100;
+        int retries = 10; // Znížené zo 100 na 10 pokusov
         for (int i = 0; i < retries; ++i)
         {
             System.out.println("Connecting to database...");
             try
             {
-                // Wait a bit for db to start
-                Thread.sleep(30000);
+                // Wait a bit for db to start (znížené z 30000ms na 3000ms = 3 s)
+                Thread.sleep(3000);
                 // Connect to database
                 con = DriverManager.getConnection("jdbc:mysql://db:3306/employees?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
-                // Wait a bit
-                Thread.sleep(10000);
-                // Exit for loop
+
+                // Exit for loop after successful connection
                 break;
             }
             catch (SQLException sqle)
